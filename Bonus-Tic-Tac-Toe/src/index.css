@@ -17,7 +17,7 @@ body {
     margin-bottom: 10px;
   }
   
-  .square {
+  .square, .history-square {
     background: #fff;
     border: 1px solid #999;
     float: left;
@@ -31,8 +31,15 @@ body {
     text-align: center;
     width: 34px;
   }
+
+  .history-square {
+    font-size: 14px;
+    line-height: 20px;
+    height: 20px;
+    width: 20px;
+  }
   
-  .square:focus {
+  .square, .history-square:focus {
     outline: none;
   }
   

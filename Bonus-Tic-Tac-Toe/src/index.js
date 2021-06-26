@@ -5,9 +5,16 @@ import './index.css';
 function Square (props) {
 
       return (
+        props.onClick ?
         <button 
           className="square"
           onClick= {props.onClick}
+        >
+          {props.value}
+        </button>
+        :
+        <button 
+          className={props.className}
         >
           {props.value}
         </button>
@@ -17,10 +24,16 @@ function Square (props) {
 
     renderSquare(i) {
       return (
-      <Square  
-      value={this.props.squares[i]} 
-      onClick={() => this.props.onClick(i)}
-      />
+        this.props.onClick ?
+        <Square  
+          value={this.props.squares[i]} 
+          onClick={() => this.props.onClick(i)}
+        />
+        :
+        <Square  
+          value={this.props.squares[i]}
+          className={this.props.className}
+        />
       );
     }
   
@@ -93,7 +106,7 @@ function Square (props) {
 
       const history = this.state.history;
       const current = history[this.state.stepNumber];
-      const winner = calculateWinner(current.squares);
+      const winner = calculateWinner(current.squares);     
 
       const moves = history.map((step, move) => {
         const desc = move ?
@@ -102,6 +115,10 @@ function Square (props) {
         return(
           <li key={move}>
             <button onClick={() => this.jumpTo(move)}>{desc}</button>
+            <Board
+              squares={history[move].squares}
+              className="history-square"
+            />
           </li>
         );
       });
