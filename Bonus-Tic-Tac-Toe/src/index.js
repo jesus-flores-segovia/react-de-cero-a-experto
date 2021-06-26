@@ -25,12 +25,14 @@ function Square (props) {
     renderSquare(i) {
       return (
         this.props.onClick ?
-        <Square  
+        <Square
+          key={i}  
           value={this.props.squares[i]} 
           onClick={() => this.props.onClick(i)}
         />
         :
-        <Square  
+        <Square
+          key={"history_" + i}   
           value={this.props.squares[i]}
           className={this.props.className}
         />
@@ -40,21 +42,19 @@ function Square (props) {
     render() {
       return (
         <div>
-          <div className="board-row">
-            {this.renderSquare(0)}
-            {this.renderSquare(1)}
-            {this.renderSquare(2)}
-          </div>
-          <div className="board-row">
-            {this.renderSquare(3)}
-            {this.renderSquare(4)}
-            {this.renderSquare(5)}
-          </div>
-          <div className="board-row">
-            {this.renderSquare(6)}
-            {this.renderSquare(7)}
-            {this.renderSquare(8)}
-          </div>
+          {
+            [1, 2, 3].map((row, rowIdx) => {
+              
+              return <div key={row} className="board-row">
+                {
+                  [1, 2, 3].map((col, colIdx) => {
+                    
+                    return this.renderSquare((3 * rowIdx) + colIdx);
+                  })
+                }
+                </div>
+            })
+          }
         </div>
       );
     }
@@ -93,6 +93,10 @@ function Square (props) {
         xIsNext: !this.state.xIsNext,
         stepNumber: history.length
       });
+
+      const historyButtons = document.querySelectorAll('*[id^="button-"]');
+      historyButtons.forEach((value) => { value.style.fontWeight = "normal" });
+
     }
 
     jumpTo(step){
@@ -100,6 +104,8 @@ function Square (props) {
         stepNumber: step,
         xIsNext: (step % 2) === 0,
       });
+
+      document.getElementById(`button-${step}`).style.fontWeight = "bold";
     }
 
     render() {
@@ -113,8 +119,8 @@ function Square (props) {
           `Go to move #${move}` :
           `Go to game start`;
         return(
-          <li key={move}>
-            <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <li key={`li-${move}`}>
+            <button id={`button-${move}`} onClick={() => this.jumpTo(move)}>{desc}</button>
             <Board
               squares={history[move].squares}
               className="history-square"
