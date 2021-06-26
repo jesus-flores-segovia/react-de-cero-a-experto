@@ -17,7 +17,7 @@ body {
     margin-bottom: 10px;
   }
   
-  .square, .history-square {
+  *[id^="square-"], *[id^="history-square-"] {
     background: #fff;
     border: 1px solid #999;
     float: left;
@@ -32,7 +32,7 @@ body {
     width: 34px;
   }
 
-  .history-square {
+  *[id^="history-square-"] {
     font-size: 14px;
     line-height: 20px;
     height: 20px;
@@ -54,4 +54,4 @@ body {
   
   .game-info {
     margin-left: 20px;
-  }  
+  }

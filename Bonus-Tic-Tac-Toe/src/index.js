@@ -7,14 +7,15 @@ function Square (props) {
       return (
         props.onClick ?
         <button 
-          className="square"
+          id={props.id}
           onClick= {props.onClick}
         >
           {props.value}
         </button>
         :
-        <button 
-          className={props.className}
+        <button
+          
+          id={props.id}
         >
           {props.value}
         </button>
@@ -29,12 +30,13 @@ function Square (props) {
           key={i}  
           value={this.props.squares[i]} 
           onClick={() => this.props.onClick(i)}
+          id={`square-${i}`}
         />
         :
         <Square
-          key={"history_" + i}   
+          key={`history_${i}`}   
           value={this.props.squares[i]}
-          className={this.props.className}
+          id={this.props.id}
         />
       );
     }
@@ -59,7 +61,6 @@ function Square (props) {
       );
     }
   }
-  
   class Game extends React.Component {
 
     constructor(props){
@@ -123,18 +124,29 @@ function Square (props) {
             <button id={`button-${move}`} onClick={() => this.jumpTo(move)}>{desc}</button>
             <Board
               squares={history[move].squares}
-              className="history-square"
+              id={`history-square-${move}`}
             />
           </li>
         );
       });
 
       let status;
+      const squareButtons = document.querySelectorAll('*[id^="square-"]');
 
       if(winner){
-        status = `Winner: ${winner}`;
+        status = `Winner: ${winner.mark}`;
+        winner.line.forEach((winSquareIdx) => { 
+          squareButtons.forEach((squareButton) => { 
+            if(squareButton.id.endsWith(winSquareIdx)){
+              squareButton.style.color = "greenyellow";
+            }  
+          });
+        });
       }else{
         status = `Next player: ${this.state.xIsNext ? "X": "O"}`;
+        squareButtons.forEach((squareButton) => { 
+          squareButton.style.color = "";
+        });
       }
 
       return (
@@ -168,7 +180,7 @@ function Square (props) {
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-        return squares[a];
+        return {mark: squares[a], line: lines[i]};
       }
     }
     return null;
