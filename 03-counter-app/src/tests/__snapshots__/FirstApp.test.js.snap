@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file FirstApp.test.js 'FirstApp' component must show correctly 1`] = `
+<Fragment>
+  <h1>
+    Hello, I'm Jesús Flores
+  </h1>
+  <p>
+    Here there is a default subtitle
+  </p>
+</Fragment>
+`;
