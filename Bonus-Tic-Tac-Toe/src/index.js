@@ -192,3 +192,6 @@ function Square (props) {
     <Game />,
     document.getElementById('root')
   );
+
+// TODO: Agrega un botón de switch que te permita ordenar los movimientos en orden ascendente o descendente.
+// TODO: Cuando nadie gana, muestra un mensaje acerca de que el resultado es un empate.
