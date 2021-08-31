@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file GifGrid.test.js 'GifGrid' component must show correctly 1`] = `
+<Fragment>
+  <h3>
+    Dragon Ball
+  </h3>
+  <p>
+    Loading...
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;

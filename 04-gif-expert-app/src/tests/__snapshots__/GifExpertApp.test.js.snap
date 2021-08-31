@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file GifExpertApp.test.js 'GifExpertApp' component must show a list of categories 1`] = `
+<Fragment>
+  <h2>
+    GifExpertApp
+  </h2>
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <hr />
+  <GifGrid
+    category="Dragon Ball"
+    key="Dragon Ball"
+  />
+  <GifGrid
+    category="One Punch"
+    key="One Punch"
+  />
+</Fragment>
+`;
+
+exports[`Tests inside file GifExpertApp.test.js 'GifExpertApp' component must show correctly 1`] = `
+<Fragment>
+  <h2>
+    GifExpertApp
+  </h2>
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <hr />
+</Fragment>
+`;

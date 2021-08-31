@@ -16,8 +16,7 @@ export const AddCategory = ({setCategories}) => {
             // Recibimos las categories en el callback de la función del useState
             setCategories(categories => [inputValue, ...categories]);
             setInputValue("");
-        }
-        
+        }      
     };
 
     return (
