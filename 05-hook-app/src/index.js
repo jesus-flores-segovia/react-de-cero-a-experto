@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //import { CallbackHook } from './components/06-useMemo/CallbackHook';
 //import { Father } from './components/07-memo-task/Father';
-import { TodoApp } from './components/08-useReducer/TodoApp';
+//import { TodoApp } from './components/08-useReducer/TodoApp';
+import { MainApp } from './components/09-useContext/MainApp';
 //import { MemoHook } from './components/06-useMemo/MemoHook';
 //import { Memorize } from './components/06-useMemo/Memorize';
 //import { FormWithCustomHook } from './components/02-useEffect/FormWithCustomHook';
@@ -17,6 +18,6 @@ import { TodoApp } from './components/08-useReducer/TodoApp';
 //import { UseEffectUseLayoutEffect } from './components/05-useLayoutEffect/UseEffectUseLayoutEffect';
 
 ReactDOM.render(
-    <TodoApp />,
+    <MainApp />,
   document.getElementById('root')
 );
