@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file HookApp.test.js 'HookApp' component must show correctly 1`] = `
+<div>
+  <h1>
+    HookApp
+  </h1>
+</div>
+`;
