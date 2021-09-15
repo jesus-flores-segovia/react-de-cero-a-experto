@@ -8,12 +8,10 @@ export const useFetch = (url) => {
     useEffect(() => {
         return () => {
             isMounted.current = false;
-            console.log("isMounted to false.");
         }
     }, [])
 
     useEffect(() => {
-        console.log("useEffect of [url].");
         setState({data: null, loading: true, error: null});
 
         fetch(url)
@@ -27,10 +25,16 @@ export const useFetch = (url) => {
                                 error: null,
                                 data
                             });
-                        } else{
-                            console.log("setState not called.");
                         }
-                    }, 4000);
+                    }, 2000);
+            }).catch(onrejected => {
+                //console.log(onrejected.error);
+
+                setState({
+                    loading: false,
+                    error: onrejected.error,
+                    data: null
+                });
             });
 
     }, [url]);
