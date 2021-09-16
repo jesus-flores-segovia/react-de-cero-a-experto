@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file MultipleCustomHooks.test.js 'MultipleCustomHooks' component must show correctly 1`] = `
+<div>
+  <h1>
+    Breaking Bad Quotes
+  </h1>
+  <hr />
+  <div
+    className="alert, alert-info text-center"
+  >
+    Loading...
+  </div>
+  <button
+    className="btn btn-primary"
+    onClick={[Function]}
+  >
+    Next quote
+  </button>
+</div>
+`;
+
+exports[`Tests inside file MultipleCustomHooks.test.js 'MultipleCustomHooks' component must show the retrieved information 1`] = `
+<div>
+  <h1>
+    Breaking Bad Quotes
+  </h1>
+  <hr />
+  <blockquote
+    className="blockquote text-end"
+  >
+    <p
+      className="mb-3"
+    >
+      This is an example quote.
+    </p>
+    <footer
+      className="blockquote-footer"
+    >
+      Jesús
+    </footer>
+  </blockquote>
+  <button
+    className="btn btn-primary"
+    onClick={[Function]}
+  >
+    Next quote
+  </button>
+</div>
+`;
