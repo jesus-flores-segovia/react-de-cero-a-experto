@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file TodoListItem.test.js 'TodoListItem' component must show correctly 1`] = `
+<li
+  className="list-group-item"
+>
+  <p
+    className="complete"
+    onClick={[Function]}
+  >
+    1
+    . 
+    Learn React
+  </p>
+  <button
+    className="btn btn-danger"
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+</li>
+`;
