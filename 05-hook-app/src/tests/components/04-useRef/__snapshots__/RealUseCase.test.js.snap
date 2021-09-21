@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file RealUseCase.test.js 'RealUseCase' component must show 'MultipleCustomHooks' component 1`] = `
+<div>
+  <h1>
+    RealUseCase
+  </h1>
+  <MultipleCustomHooks />
+  <button
+    className="btn btn-primary mt-5"
+    onClick={[Function]}
+  >
+    Show/Hide
+  </button>
+</div>
+`;
+
+exports[`Tests inside file RealUseCase.test.js 'RealUseCase' component must show correctly 1`] = `
+<div>
+  <h1>
+    RealUseCase
+  </h1>
+  <button
+    className="btn btn-primary mt-5"
+    onClick={[Function]}
+  >
+    Show/Hide
+  </button>
+</div>
+`;
