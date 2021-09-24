@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file 'TodoAdd.test.js' 'TodoAdd' component must show correctly 1`] = `
+<Fragment>
+  <h4>
+    Add TODO
+  </h4>
+  <hr />
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoComplete="off"
+      className="form-control"
+      name="description"
+      onChange={[Function]}
+      placeholder="Learn..."
+      type="text"
+      value=""
+    />
+    <div
+      className="d-grid"
+    >
+      <button
+        className="btn btn-outline-primary mt-1"
+        type="submit"
+      >
+        Add
+      </button>
+    </div>
+  </form>
+</Fragment>
+`;
