@@ -11,7 +11,7 @@ export const LoginScreen = () => {
 
     const {email, password} = values;
 
-    const {user, setUser} = useContext(UserContext);
+    const {setUser} = useContext(UserContext);
 
     const handleSubmit = (e) => {
         e.preventDefault();
