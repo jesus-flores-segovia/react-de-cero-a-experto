@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file 'AppRouter.test.js' 'AppRouter' component must show correctly 1`] = `
+<div>
+  <nav
+    className="navbar navbar-expand-lg navbar-light bg-light"
+  >
+    <div
+      className="container-fluid"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+        onClick={[Function]}
+      >
+        useContext
+      </a>
+      <button
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        className="navbar-toggler"
+        data-bs-target="#navbarNavAltMarkup"
+        data-bs-toggle="collapse"
+        type="button"
+      >
+        <span
+          className="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        className="collapse navbar-collapse"
+        id="navbarNavAltMarkup"
+      >
+        <div
+          className="navbar-nav"
+        >
+          <a
+            aria-current="page"
+            className="nav-link active"
+            href="/"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Home
+          </a>
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/about"
+            onClick={[Function]}
+          >
+            About
+          </a>
+          <a
+            aria-current={null}
+            className="nav-link"
+            href="/login"
+            onClick={[Function]}
+          >
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="container"
+  >
+    <div>
+      <h1>
+        HomeScreen
+      </h1>
+      <hr />
+      <pre>
+        {
+   "email": "floressegoviajesus@gmail.com",
+   "password": "12345"
+}
+      </pre>
+    </div>
+  </div>
+</div>
+`;
