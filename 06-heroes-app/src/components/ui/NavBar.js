@@ -1,10 +1,17 @@
 import React, { useContext } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
+import { logout } from '../../actions/authActions';
 import { AuthContext } from '../../auth/AuthContext'
 
 export const Navbar = () => {
 
-  const {user} = useContext(AuthContext);
+  const {user, dispatch} = useContext(AuthContext);
+  const history = useHistory();
+
+  const handleLogout = () => {
+    dispatch(logout());
+    history.replace("/login");
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -51,15 +58,8 @@ export const Navbar = () => {
         {user.name &&
           <span className="nav-item text-info me-3">You're logged as {user.name}</span>
         }
-          <button type="button" className="btn btn-danger">
-              <NavLink 
-                  activeClassName="active"
-                  exact
-                  to="/login"
-                  style={{color:"white", textDecoration:"none"}}
-              >
-                  Logout
-              </NavLink>
+          <button type="button" className="btn btn-danger" style={{color:"white", textDecoration:"none"}} onClick={handleLogout}>
+            Logout
           </button>
         </ul>
       </div>
