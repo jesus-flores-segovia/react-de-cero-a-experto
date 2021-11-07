@@ -8,3 +8,11 @@ export const login = (userName) => {
         }
     );
 };
+
+export const logout = () => {
+    return ( 
+        {
+            type: types.logout,
+        }
+    );
+};
