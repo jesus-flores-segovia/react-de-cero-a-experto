@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file 'AppRouter.test.js' Must show the login if the user isn't authenticated 1`] = `ReactWrapper {}`;
