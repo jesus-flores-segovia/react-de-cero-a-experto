@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file 'NavBar.test.js' NavBar component must be shown correctly 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-light bg-light"
+>
+  <div
+    className="container-fluid"
+  >
+    <a
+      className="navbar-brand ms-2"
+      href="/"
+    >
+      <img
+        alt="heroes"
+        className="me-2"
+        height="30"
+        src="/assets/icons/icons8-hulk-48.png"
+        width="30"
+      />
+      Heroes
+    </a>
+    <button
+      aria-controls="navbarText"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      className="navbar-toggler"
+      data-bs-target="#navbarText"
+      data-bs-toggle="collapse"
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      className="collapse navbar-collapse"
+      id="navbarText"
+    >
+      <ul
+        className="navbar-nav me-auto mb-2 mb-lg-0"
+      >
+        <a
+          aria-current={null}
+          className="nav-link"
+          onClick={[Function]}
+        >
+          Marvel Comics
+        </a>
+        <a
+          aria-current={null}
+          className="nav-link"
+          onClick={[Function]}
+        >
+          DC Comics
+        </a>
+        <a
+          aria-current={null}
+          className="nav-link"
+          onClick={[Function]}
+        >
+          Search
+        </a>
+      </ul>
+    </div>
+    <div
+      className="collapse navbar-collapse justify-content-end"
+      id="navbarText"
+    >
+      <ul
+        className="navbar-nav mb-2 mb-lg-0 align-items-center"
+      >
+        <span
+          className="nav-item text-info me-3"
+        >
+          You're logged as 
+          Jesús
+        </span>
+        <button
+          className="btn btn-danger"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "textDecoration": "none",
+            }
+          }
+          type="button"
+        >
+          Logout
+        </button>
+      </ul>
+    </div>
+  </div>
+</nav>
+`;
