@@ -1,3 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tests inside file 'AppRouter.test.js' Must show the login if the user isn't authenticated 1`] = `ReactWrapper {}`;
+exports[`Tests inside file 'AppRouter.test.js' Must show the login if the user isn't authenticated 1`] = `
+<div>
+  <div
+    className="container mt-5"
+  >
+    <h1>
+      Login
+    </h1>
+    <hr />
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+    >
+      Login
+    </button>
+  </div>
+</div>
+`;
