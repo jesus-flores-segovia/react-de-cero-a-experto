@@ -1,7 +1,9 @@
-import React, { useContext } from 'react'
-import { NavLink, useHistory } from 'react-router-dom'
+import React, { useContext } from 'react';
+import { NavLink, useHistory } from 'react-router-dom';
 import { logout } from '../../actions/authActions';
-import { AuthContext } from '../../auth/AuthContext'
+import { AuthContext } from '../../auth/AuthContext';
+
+const icons = require.context("../../assets/icons", true);
 
 export const Navbar = () => {
 
@@ -17,7 +19,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <a className="navbar-brand ms-2" href="/">
-          <img className="me-2" src="/assets/icons/icons8-hulk-48.png" width="30" height="30" alt="heroes"/>
+          <img className="me-2" src={icons("./hulk-icon.png").default} width="30" height="30" alt="heroes"/>
           Heroes
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
