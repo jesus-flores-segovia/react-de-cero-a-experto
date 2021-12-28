@@ -1,5 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const heroes = require.context("../../assets/heroes", true);
 
 export const HeroCard = ({
     id,
@@ -13,7 +15,7 @@ export const HeroCard = ({
     return (
         <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-4">
             <div className="card h-100">
-                <img src={`./assets/heroes/${id}.jpg`} className="card-img-top" alt={superhero}/>
+                <img src={heroes(`./${id}.jpg`).default} className="card-img-top" alt={superhero}/>
                 <div className="card-body">
                     <h5 className="card-title">{superhero}</h5>
                     <p className="card-text">{alter_ego}</p>
