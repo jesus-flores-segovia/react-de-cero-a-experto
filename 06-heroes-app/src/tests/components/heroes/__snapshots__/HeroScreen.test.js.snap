@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file 'HeroScreen.test.js' HeroScreen component must be shown a hero if the url parameter exists and it's found 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4 animate__animated animate__fadeInLeft"
+  >
+    <img
+      alt="Spider Man"
+      className="img-thumbnail"
+      src="/assets/heroes/marvel-spider.jpg"
+    />
+  </div>
+  <div
+    className="col-8"
+  >
+    <h3>
+      Spider Man
+    </h3>
+    <ul
+      className="list-group list-group-flush"
+    >
+      <li
+        className="list-group-item"
+      >
+        <b>
+          Alter ego: 
+        </b>
+        Peter Parker
+      </li>
+      <li
+        className="list-group-item"
+      >
+        <b>
+          Publisher: 
+        </b>
+        Marvel Comics
+      </li>
+      <li
+        className="list-group-item"
+      >
+        <b>
+          First Appearance: 
+        </b>
+        Amazing Fantasy #15
+      </li>
+    </ul>
+    <h5
+      className="mt-3"
+    >
+      Characters
+    </h5>
+    <p>
+      Peter Parker
+    </p>
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+    >
+      Go back
+    </button>
+  </div>
+</div>
+`;
