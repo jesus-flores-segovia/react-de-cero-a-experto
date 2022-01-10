@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import { login } from '../actions/auth'
+import { startLoadingNotes } from '../actions/notes'
 
 import { JournalScreen } from '../components/journal/JournalScreen'
 import { auth } from '../firebase/firebaseConfig'
@@ -22,6 +23,8 @@ export const AppRouter = () => {
             if(user?.uid) {
                 dispatch(login(user.uid, user.displayName));
                 setIsLoggedIn(true);
+
+                dispatch(startLoadingNotes());
             } else{
                 setIsLoggedIn(false);
             }
