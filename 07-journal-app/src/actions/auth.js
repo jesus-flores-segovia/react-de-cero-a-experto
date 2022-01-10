@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithP
 import Swal from "sweetalert2";
 import { auth, googleAuthProvider } from "../firebase/firebaseConfig";
 import { types } from "../types/types"
+import { cleanNotes } from "./notes";
 import { finishLoading, startLoading } from "./ui";
 
 export const startLoginEmailPassword = (email, password) => {
@@ -59,6 +60,7 @@ export const startLogout = () => {
         await signOut(auth);
 
         dispatch(logout());
+        dispatch(cleanNotes());
     }
 };
 
