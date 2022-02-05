@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests inside file 'RegisterScreen.test.js' 'RegisterScreen' must be shown correctly 1`] = `
+Array [
+  <h3
+    className="auth__title"
+  >
+    Register
+  </h3>,
+  <form
+    className="animate__animated animate__fadeIn animate__faster"
+    onSubmit={[Function]}
+  >
+    <div
+      className="auth__alert-error mb-5"
+    >
+      Email is not valid
+    </div>
+    <input
+      autoComplete="off"
+      className="auth__input"
+      name="name"
+      onChange={[MockFunction]}
+      placeholder="Name"
+      type="text"
+      value="Jesús"
+    />
+    <input
+      autoComplete="off"
+      className="auth__input"
+      name="email"
+      onChange={[MockFunction]}
+      placeholder="Email"
+      type="text"
+      value=""
+    />
+    <input
+      autoComplete="off"
+      className="auth__input"
+      name="password"
+      onChange={[MockFunction]}
+      placeholder="Password"
+      type="password"
+      value=""
+    />
+    <input
+      autoComplete="off"
+      className="auth__input"
+      name="password2"
+      onChange={[MockFunction]}
+      placeholder="Confirm password"
+      type="password"
+    />
+    <button
+      className="buttons__btn buttons__btn-primary buttons__btn-block mb-5"
+      type="submit"
+    >
+      Register
+    </button>
+    <a
+      className="links__link"
+      href="/auth/login"
+      onClick={[Function]}
+    >
+      Already registered?
+    </a>
+  </form>,
+]
+`;
