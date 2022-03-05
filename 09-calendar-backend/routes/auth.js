@@ -5,9 +5,11 @@
 
 const express = require("express");
 const { check } = require("express-validator");
+const { validator } = require("../middlewares/validator");
 const router = express.Router();
 
 const { register, login, newToken } = require("../controllers/auth");
+const { jwtValidator } = require("../middlewares/jwtValidator");
 
 router.post(
   "/register",
@@ -17,6 +19,7 @@ router.post(
     check("password", "Password must be at least of 6 characters").isLength({
       min: 6,
     }),
+    validator,
   ],
   register
 );
@@ -28,10 +31,11 @@ router.post(
     check("password", "Password must be at least of 6 characters").isLength({
       min: 6,
     }),
+    validator,
   ],
   login
 );
 
-router.get("/newToken", newToken);
+router.get("/newToken", jwtValidator, newToken);
 
 module.exports = router;
