@@ -20,7 +20,7 @@ app.use(express.json());
 
 // Routing
 app.use("/api/auth", require("./routes/auth"));
-// TODO: event CRUD
+app.use("/api/events", require("./routes/events"));
 
 // Listening on port 4000
 app.listen(process.env.PORT, () => {
