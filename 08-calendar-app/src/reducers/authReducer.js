@@ -13,12 +13,6 @@ export const authReducer = (state = initialState, action) => {
         isLoggedIn: true,
         ...action.payload,
       };
-    case types.authRegister:
-      return {
-        ...state,
-        isLoggedIn: true,
-        ...action.payload,
-      };
     case types.authCheckLoginState:
       return {
         ...state,
