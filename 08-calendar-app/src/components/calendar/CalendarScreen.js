@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Calendar, momentLocalizer } from "react-big-calendar";
@@ -9,14 +9,14 @@ import { CalendarEvent } from "./CalendarEvent";
 import { CalendarModal } from "./CalendarModal";
 import { uiOpenModal } from "../../actions/ui";
 import {
-  calendarDeleteEvent,
   calendarSetActiveEvent,
+  startCalendarDeleteEvent,
+  startCalendarLoadEvents,
 } from "../../actions/calendar";
 
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "../styles.css";
 import { FloatingActionButton } from "../ui/FloatingActionButton";
-import Swal from "sweetalert2";
 
 moment.locale("en", {
   week: {
@@ -30,6 +30,7 @@ const localizer = momentLocalizer(moment);
 export const CalendarScreen = () => {
   const dispatch = useDispatch();
   const { events, activeEvent } = useSelector((state) => state.calendar);
+  const { uid } = useSelector((state) => state.auth);
 
   const [lastView, setLastView] = useState(
     localStorage.getItem("lastView") || "month"
@@ -52,9 +53,9 @@ export const CalendarScreen = () => {
     setLastView(event);
   };
 
-  const eventStylesSetter = () => {
+  const eventStylesSetter = (event) => {
     const style = {
-      backgroundColor: "#367CF7",
+      backgroundColor: uid === event.user._id ? "#367CF7" : "#465660",
       borderRadius: "0px",
       opacity: 0.8,
       display: "block",
@@ -70,19 +71,12 @@ export const CalendarScreen = () => {
   };
 
   const deleteEvent = () => {
-    Swal.fire({
-      title: "Do you want to delete the event?",
-      showCancelButton: true,
-      confirmButtonText: "Delete it",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire("The event was deleted", "", "success");
-        dispatch(calendarDeleteEvent());
-      } else if (result.isDenied) {
-        Swal.fire("The event was not deleted", "", "info");
-      }
-    });
+    dispatch(startCalendarDeleteEvent(activeEvent));
   };
+
+  useEffect(() => {
+    dispatch(startCalendarLoadEvents());
+  }, []);
 
   return (
     <div className="calendar-screen">

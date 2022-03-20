@@ -83,7 +83,7 @@ const newToken = async (req, res = response) => {
 
   try {
     const token = await createJWT(uid, name);
-    return res.send({ ok: true, token });
+    return res.status(200).send({ ok: true, token, uid, name });
   } catch (error) {
     console.log(error);
     res.status(500).send({

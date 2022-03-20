@@ -15,7 +15,6 @@ export const initialEvent = {
     _id: "1234",
     name: "Jesús",
   },
-  bgcolor: "#fafafa",
 };
 
 export const customStyles = {
