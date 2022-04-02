@@ -75,6 +75,7 @@ export const LoginScreen = () => {
 
     if (registerPassword !== registerPassword2) {
       Swal.fire("Cannot register", "Password fields must match", "error");
+      return;
     }
 
     dispatch(startRegister(registerName, registerEmail, registerPassword));

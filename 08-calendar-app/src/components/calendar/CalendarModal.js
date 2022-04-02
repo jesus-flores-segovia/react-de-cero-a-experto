@@ -86,6 +86,7 @@ export const CalendarModal = () => {
       onRequestClose={closeModal}
       overlayClassName="modal-background"
       style={customStyles}
+      ariaHideApp={false}
     >
       <h1>{activeEvent ? "Update the event" : "Create a new event"}</h1>
       <hr />
